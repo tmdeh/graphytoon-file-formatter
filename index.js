@@ -2,6 +2,7 @@ const fs = require('fs')
 
 let files = fs.readdirSync('folder');
 
+//star_1.svg 형태여야 한다.
 const fillZero = (width, str) => {
   return str.length >= width ? str:new Array(width-str.length+1).join('0')+str;
 }
