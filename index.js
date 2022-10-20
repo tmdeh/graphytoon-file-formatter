@@ -2,7 +2,7 @@ const fs = require('fs')
 
 let files = fs.readdirSync('folder');
 
-function fillZero(width, str){
+const fillZero = (width, str) => {
   return str.length >= width ? str:new Array(width-str.length+1).join('0')+str;
 }
 
