@@ -42,9 +42,20 @@ files.forEach(file => {
   }
 })
 
+let mainListFile = ""
+duplicatedListFile.trim().split('\n').map(v => {
+  mainListFile += "shape/" + v + "\n"; 
+})
+
 fs.writeFile('new.txt', duplicatedListFile, (err)=> {
   if(err) {
     console.error(err);
+  }
+})
+
+fs.writeFile('main.new.txt', mainListFile, (err) => {
+  if(err) {
+    console.error(err)
   }
 })
 
